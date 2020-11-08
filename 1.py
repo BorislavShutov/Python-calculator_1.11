@@ -19,7 +19,8 @@ def wolk():
 		print('Ou, its good idea Bro!!!')
 
 	elif (pogoda == 2 and time == 2):
-		print('Dont do this, stay at home and drink tea.')
+		print('Dont do this, stay at home with hot drink')
+		drink()
 
 	elif (pogoda == 2 and time == 1):
 		print('Maybe you take Umbrella? ')
