@@ -67,15 +67,32 @@ def calculate():
 	else:
 		print('This is bad operator')
 
+indicaM = ['Afghani', 'Blueberry', 'Bubba Kush', 'Hindu Kush', 'Northern Lights']
+sativaM = ['Acapulco Gold', 'Kali Mist', 'Purple Haze', 'Super Lemon Haze', 'Alaskan Thunder Fuck']
+
+def cD():
+	print('Hello Bro')
+	a = int(raw_input('Type 1 if you want indica\nType 2 if you want sativa\nWhat smoke bro? :  '))
+	if a == 1:
+		print('Maybe smoke this sort ' + random.choice(indicaM))
+	elif a == 2:
+		print('Maybe smoke this sort: ' + random.choice(sativaM))
+	else:
+		print('Idiot?')
 
 	
 
 def action():
 
+	nameP = raw_input('name: ')
+	name = nameP.capitalize()
+	print('Hello ' + name)
+
 	print('''What do you want to do?
 	Type 1 if you want wolk on street
 	Type 2 if you want stay at home
-	Type 3 if you want Calculate''')
+	Type 3 if you want Calculate
+	Type 4 if you need help from cannabis''')
 
 	yourAction = int(raw_input('Your choise: '))
 
@@ -85,6 +102,8 @@ def action():
 		drink()
 	elif (yourAction == 3):
 		calculate()
+	elif (yourAction == 4):
+		cD()
 
 
 action()
