@@ -1,9 +1,11 @@
 
 import random
 
+# Weather :
+
 def wolk():
 
-	pogoda = int(raw_input('''
+	weather = int(raw_input('''
 	type 1 if weather is Sunny
 	type 2 if weather is Rainy
 	what weather now? : '''))
@@ -15,18 +17,20 @@ def wolk():
 	type 2 if a night
 	what time now? : '''))
 
-	if (pogoda == 1 and time == 1 ):
+	if (weather == 1 and time == 1 ):
 		print('Ou, its good idea Bro!!!')
 
-	elif (pogoda == 2 and time == 2):
+	elif (weather == 2 and time == 2):
 		print('Dont do this, stay at home with hot drink')
 		drink()
 
-	elif (pogoda == 2 and time == 1):
+	elif (weather == 2 and time == 1):
 		print('Maybe you take Umbrella? ')
 
-	elif (pogoda == 1 and time == 2):
+	elif (weather == 1 and time == 2):
 		print('Its not logic, you are stupid! ')
+
+# Favorite drink function: 
 
 def drink():
 	favorite = int(raw_input('''
@@ -39,12 +43,14 @@ def drink():
 		print('Put the kettle on coffee Bro!')
 	filmList()
 
+# FilmsDB :
 
 def filmList():
 	films = ['The Godfather', 'Portrait of a Lady on Fire', 'Toy Story', 'Gravity', 
 	'Parasite', '12 Years a Slave', '12 Angry Men', 'Pans Labyrinth']
 	print('Maybe watch this film? : ' + random.choice(films))
 
+# Calculate:
 
 def calculate():
 
@@ -67,20 +73,37 @@ def calculate():
 	else:
 		print('This is bad operator')
 
-indicaM = ['Afghani', 'Blueberry', 'Bubba Kush', 'Hindu Kush', 'Northern Lights']
-sativaM = ['Acapulco Gold', 'Kali Mist', 'Purple Haze', 'Super Lemon Haze', 'Alaskan Thunder Fuck']
+# CannaDoctor function : 
 
 def cD():
-	print('Hello Bro')
-	a = int(raw_input('Type 1 if you want indica\nType 2 if you want sativa\nWhat smoke bro? :  '))
-	if a == 1:
-		print('Maybe smoke this sort ' + random.choice(indicaM))
-	elif a == 2:
-		print('Maybe smoke this sort: ' + random.choice(sativaM))
+	sortsM = {'1' : ['Critical Kush', 'Bubba Kush', 'Pineapple Chunk', 'Dr. Grinspoon', ],
+			  '2' : ['Bad Azz Kush', 'Bubba Kush', 'Amherst Sour Diesel ', 'Satori'],
+			  '3' : ['Dr. Grinspoon', 'Pineapple Chunk', 'Wild Thailand', 'Colombian Gold', 'Amherst Sour Diesel', 'Satori']}
+	
+
+# 1 = relieve stress,
+# 2 = pain or depression,
+# 3 = high effect.
+
+	a = raw_input('Type 1 if cannabis need  for relieve stress\nType 2 if cannabis need  for pain or depression\nType 3 if cannabis need  for high effect')
+	if a in sortsM:
+		y = sortsM[a]
+		print('I think this sort will suit you perfectly :   ' + random.choice(y))
+
+	b = raw_input('Maybe you want see all sorts?\nY or N : ')
+
+	if b == 'y':
+		for x in sortsM[a]:
+			print('*' + x)
+			
+	elif b == 'n':
+		print('Good bye')
 	else:
-		print('Idiot?')
+		print('Idiot')
+
 
 	
+# Main func :
 
 def action():
 
@@ -106,6 +129,6 @@ def action():
 		cD()
 
 
-action()
+action()   # Start 
 
 
